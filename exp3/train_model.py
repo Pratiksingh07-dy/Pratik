@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 # Load dataset
-data = pd.read_csv("HeartDis.csv")
+data = pd.read_csv("Heart.csv")
 
 # Features and target
 X = data.iloc[:, :-1]
