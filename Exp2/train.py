@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
-df = pd.read_csv("Exp2/loan_data.csv")
+df = pd.read_csv("loan_data.csv")
 
 # Convert categorical columns to numbers
 df = pd.get_dummies(df, drop_first=True)
