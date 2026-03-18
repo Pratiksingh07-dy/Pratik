@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+import joblib  
 
 df = pd.read_csv("loan_data.csv")
 
@@ -30,3 +31,12 @@ y_pred = model.predict(X_test)
 # Accuracy
 acc = accuracy_score(y_test, y_pred)
 print("Model Accuracy:", acc)
+
+
+import joblib
+
+joblib.dump(model, "model.pkl")
+joblib.dump(scaler, "scaler.pkl")
+
+
+joblib.dump(X.columns.tolist(), "columns.pkl")
